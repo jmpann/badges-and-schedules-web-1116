@@ -35,3 +35,22 @@ Now you have to tell the printer what to print. Create a method called `printer`
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/badges-and-schedules' title='Badges and Schedules'>Badges and Schedules</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/badges-and-schedules'>Badges and Schedules Lab</a> on Learn.co and start learning to code for free.</p>
+
+def assign_rooms (array)
+assigned = []
+counter = 1
+  while counter <= 7
+    array.each do |name|
+      assigned.push ("Hello, #{name}! You'll be assigned to room #{counter}!")
+      counter += 1
+    end
+    break
+  end
+  return assigned
+end
+
+def assign_rooms (attendees)
+assigned = []
+attendees.each_with_index{|name, index| assigned.push("Hello, #{name}! You'll be assigned to room #{index + 1}!") }
+return assigned
+end
